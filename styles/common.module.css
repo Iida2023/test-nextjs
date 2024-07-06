@@ -9,3 +9,16 @@
     text-align: center;
     margin-top: 50px;
 }
+
+.roundImage {
+    width: 400px;
+    /* 画像の幅 */
+    height: 400px;
+    /* 画像の高さ */
+    border-radius: 50%;
+    /* 丸みの度合い */
+    object-fit: cover;
+    /* 画像を切り抜く方法 */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    /* 黒枠の設定 */
+}
