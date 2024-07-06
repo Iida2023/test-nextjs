@@ -1,0 +1,11 @@
+.header {
+    text-align: center;
+    /* 中央揃え */
+    margin-top: 50px;
+    /* 上部のマージン */
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
