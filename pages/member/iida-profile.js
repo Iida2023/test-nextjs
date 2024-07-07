@@ -3,13 +3,19 @@ import styles from "/styles/home.module.css";
 import imageStyles from "/styles/common.module.css";
 
 export async function getServerSideProps() {
-    const res = "飯田　光貴"
+    const data = {
+        name: "Koki Iida",
+        birthdate: "2001年08月24日",
+        location: "愛知県",
+        skills: ["JavaScript", "React", "Next.js", "Node.js"],
+        hobbies: ["読書", "旅行", "プログラミング"],
+        bio: "こちらは飯田のプロフィールページです。よろしく！"
+    };
 
-    // Pass data to the page via props
-    return { props: { data: res } }
+    return { props: { data } };
 }
 
-export default function IidaProfile({ data }) {
+export default function Profile({ data }) {
     return (
         <Common>
             <div className={styles.resume}>
@@ -24,50 +30,50 @@ export default function IidaProfile({ data }) {
                     <div className={styles.profileBody}>
                         <div className={styles.profileItem}>
                             <span className={styles.itemLabel}>氏名:</span>
-                            <span className={styles.itemValue}>{data}</span>
+                            <span className={styles.itemValue}>{data.name}</span>
                         </div>
                         <div className={styles.profileItem}>
                             <span className={styles.itemLabel}>生年月日:</span>
-                            <span className={styles.itemValue}>2001年08月24日</span>
+                            <span className={styles.itemValue}>{data.birthdate}</span>
                         </div>
                         <div className={styles.profileItem}>
                             <span className={styles.itemLabel}>出身:</span>
-                            <span className={styles.itemValue}>愛知県</span>
+                            <span className={styles.itemValue}>{data.location}</span>
                         </div>
                     </div>
                 </div>
-                <div className={styles.education}>
-                    <div className={styles.educationHeader}>
-                        <h2>学歴</h2>
+                <div className={styles.profile}>
+                    <div className={styles.profileHeader}>
+                        <h2>自己紹介</h2>
                     </div>
-                    <div className={styles.educationBody}>
-                        <div className={styles.educationItem}>
-                            <span className={styles.itemLabel}>学校名:</span>
-                            <span className={styles.itemValue}>三重大学</span>
-                        </div>
-                        <div className={styles.educationItem}>
-                            <span className={styles.itemLabel}>学部・学科:</span>
-                            <span className={styles.itemValue}>工学部 情報工学コース</span>
-                        </div>
-                        <div className={styles.educationItem}>
-                            <span className={styles.itemLabel}>卒業年月:</span>
-                            <span className={styles.itemValue}>2024年3月</span>
+                    <div className={styles.profileBody}>
+                        <div className={styles.profileItem}>
+                            <span className={styles.itemValue}>{data.bio}</span>
                         </div>
                     </div>
                 </div>
-                <div className={styles.workExperience}>
-                    <div className={styles.workExperienceHeader}>
-                        <h2>職歴</h2>
+                <div className={styles.profile}>
+                    <div className={styles.profileHeader}>
+                        <h2>趣味</h2>
                     </div>
-                    <div className={styles.workExperienceBody}>
-                        <div className={styles.workExperienceItem}>
-                            <span className={styles.itemLabel}>会社名:</span>
-                            <span className={styles.itemValue}>株式会社豊田自動織機ITソリューションズ</span>
-                        </div>
-                        <div className={styles.workExperienceItem}>
-                            <span className={styles.itemLabel}>期間:</span>
-                            <span className={styles.itemValue}>2024年4月 - 現在</span>
-                        </div>
+                    <div className={styles.profileBody}>
+                        {data.hobbies.map((hobby, index) => (
+                            <div key={index} className={styles.profileItem}>
+                                <span className={styles.itemValue}>{hobby}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.profile}>
+                    <div className={styles.profileHeader}>
+                        <h2>学習済みプログラミング言語</h2>
+                    </div>
+                    <div className={styles.profileBody}>
+                        {data.skills.map((skill, index) => (
+                            <div key={index} className={styles.profileItem}>
+                                <span className={styles.itemValue}>{skill}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

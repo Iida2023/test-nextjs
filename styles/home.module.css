@@ -1,60 +1,4 @@
-/* styles/Home.module.css */
-.resume {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile,
-.education,
-.workExperience {
-    margin-bottom: 30px;
-}
-
-.profileHeader,
-.educationHeader,
-.workExperienceHeader {
-    background-color: #f0f0f0;
-    padding: 8px 12px;
-    border-bottom: 1px solid #ccc;
-}
-
-.profileHeader h2,
-.educationHeader h2,
-.workExperienceHeader h2 {
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-.profileBody,
-.educationBody,
-.workExperienceBody {
-    padding: 10px;
-}
-
-.profileItem,
-.educationItem,
-.workExperienceItem {
-    margin-bottom: 10px;
-}
-
-.itemLabel {
-    font-weight: bold;
-}
-
-.itemValue {
-    margin-left: 10px;
-}
-
-/* styles/Home.module.css */
+/* HomeCSS */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -69,6 +13,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
+    text-shadow: 1px 1px 2px #aaa;
 }
 
 .subtitle {
@@ -95,4 +40,50 @@
 
 .memberLink:hover {
     color: #005bb5;
+}
+
+/* 個人用CSS */
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.profileHeader {
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profileHeader h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.profileBody {
+    padding: 10px;
+}
+
+.profileItem {
+    margin-bottom: 10px;
+}
+
+.itemLabel {
+    font-weight: bold;
+}
+
+.itemValue {
+    margin-left: 10px;
 }
