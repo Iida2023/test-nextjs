@@ -3,22 +3,13 @@ import styles from "/styles/home.module.css";
 import imageStyles from "/styles/common.module.css";
 
 export async function getServerSideProps() {
-    // サーバーサイドでデータを取得するための処理を記述
-    const data = {
-        name: '飯田　光貴',
-        age: 22,
-        occupation: 'エンジニア'
-    };
+    const res = "飯田　光貴"
 
-    // データをpropsとしてページコンポーネントに渡す
-    return {
-        props: {
-            initialData: data
-        }
-    };
+    // Pass data to the page via props
+    return { props: { data: res } }
 }
 
-export default function IidaProfile({ initialData }) {
+export default function IidaProfile({ data }) {
     return (
         <Common>
             <div className={styles.resume}>
@@ -33,7 +24,7 @@ export default function IidaProfile({ initialData }) {
                     <div className={styles.profileBody}>
                         <div className={styles.profileItem}>
                             <span className={styles.itemLabel}>氏名:</span>
-                            <span className={styles.itemValue}>飯田　光貴</span>
+                            <span className={styles.itemValue}>{data}</span>
                         </div>
                         <div className={styles.profileItem}>
                             <span className={styles.itemLabel}>生年月日:</span>
