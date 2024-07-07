@@ -8,8 +8,8 @@ export async function getServerSideProps() {
         birthdate: "2001年08月24日",
         location: "愛知県",
         skills: ["JavaScript", "React", "Next.js", "Node.js"],
-        hobbies: ["読書", "旅行", "プログラミング"],
-        bio: "こちらは飯田のプロフィールページです。よろしく！"
+        hobbies: ["読書", "旅行", "睡眠"],
+        bio: "従業員番号はD0660"
     };
 
     return { props: { data } };
